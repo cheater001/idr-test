@@ -1,0 +1,29 @@
+<div class="killmaill-list-container">
+  <cdk-table #table [dataSource]="dataSource">
+    <ng-container cdkColumnDef="Name">
+      <cdk-header-cell *cdkHeaderCellDef class="user-header-cell">
+        Name
+      </cdk-header-cell>
+      <cdk-cell *cdkCellDef="let row" class="user-cell">
+        <a [routerLink]="[row.id]">
+          {{ row.name }}
+        </a>
+      </cdk-cell>
+    </ng-container>
+
+    <ng-container cdkColumnDef="Email">
+      <cdk-header-cell *cdkHeaderCellDef class="user-header-cell">
+        Email
+      </cdk-header-cell>
+      <cdk-cell *cdkCellDef="let row" class="user-cell">
+        {{ row.email }}
+      </cdk-cell>
+    </ng-container>
+
+    <cdk-header-row *cdkHeaderRowDef="['Name', 'Email']" class="user-header-row"></cdk-header-row>
+    <cdk-row *cdkRowDef="let row; columns: ['Name', 'Email'];" class="user-row"></cdk-row>
+  </cdk-table>
+</div>
+
+
+

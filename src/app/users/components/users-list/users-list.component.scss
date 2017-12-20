@@ -1,0 +1,45 @@
+@import "../../../../styles/variables";
+
+.users-list-container {
+  display: flex;
+  flex-direction: column;
+  min-width: 300px;
+}
+
+.users-table {
+  flex: 1 1 auto;
+  overflow: auto;
+  max-height: 500px;
+}
+
+.user-header-row,
+.user-row {
+  display: flex;
+  border-bottom: 1px solid #ccc;
+  align-items: center;
+  padding: 16px;
+}
+
+.user-header-row {
+  border-bottom-width: 2px;
+}
+
+.user-row:last-child {
+  border-bottom: none;
+}
+
+.user-cell,
+.user-header-cell {
+  flex: 1;
+}
+
+.user-header-cell {
+  font-size: 12px;
+  font-weight: bold;
+  color: $font-color-primary;
+}
+
+.user-cell {
+  font-size: 12px;
+  color: $font-color-secondary;
+}

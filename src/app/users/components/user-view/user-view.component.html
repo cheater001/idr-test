@@ -1,0 +1,20 @@
+<div *ngIf="user$ | async as user">
+  <p>
+    <small class="field">Name:</small>
+    <strong class="value">{{ user.name }}</strong>
+  </p>
+  <p>
+    <small class="field">User Name:</small>
+    <strong class="value">{{ user.username }}</strong>
+  </p>
+  <p>
+    <small class="field">Address:</small>
+    <strong class="value">
+      {{ user.address.city }}, {{ user.address.street }}, {{ user.address.suite }}, {{ user.address.zipcode }}
+    </strong>
+  </p>
+  <p>
+    <small class="field">Company:</small>
+    <strong class="value">{{ user.company.name }}</strong>
+  </p>
+</div>
